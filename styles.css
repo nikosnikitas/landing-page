@@ -1,0 +1,410 @@
+/****************************************
+* Styles for Landing Page.
+* Author: Nikos-Nikitas
+* GitHub: https://github.com/nikosnikitas
+******************************************/
+
+:root {
+    --red-purple-gradient: linear-gradient(90deg,#F14444 45%,
+    #D53567 55%,#9A109A 94%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+
+body {
+    background-color: lightgray;
+    display: flex;
+    justify-content: center;
+}
+
+#totop {
+    font-size: large;
+    font-weight: bold;
+    color: #f6f6f6;
+    text-decoration: none;
+    background-color: #f14444;
+    border: solid #D53567 1px;
+    border-radius: 25%;
+    width: 2%;
+    height: 2%;
+    text-align: center;
+    position: fixed;
+    top: 90%;
+    left: 80%
+}
+
+.container {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #f6f6f6;
+    border: solid #f6f6f6 1px;
+    border-radius: 25px;
+    color: #000;
+    font-family: sans-serif;
+    font-size: large;
+    gap: 70px;
+    margin: 30px;
+    animation-name: show;
+    animation-duration: 3s;
+}
+
+#logo {
+    width: 12%;
+    padding: 12px;
+    justify-self: flex-start;
+    animation-name: show;
+    animation-duration: 5s;
+}
+
+@keyframes show {
+    from {
+       opacity: 0%;
+    }
+    to {
+        opacity: 100%;
+    }
+}
+
+#nav {
+    display: flex;
+    flex-direction: row;
+    align-self: center;
+    justify-content: flex-start;
+    gap: 70px;
+    background: var(--red-purple-gradient);
+    border: solid var(--red-purple-gradient) 1px;
+    border-radius: 25px;
+    color:#f6f6f6;
+    width: 75%;
+    margin: 30px
+}
+
+#menu {
+    display: flex;
+    align-self: center;
+    justify-content: space-between;
+    flex-direction: row;
+    list-style-type: none;
+}
+
+#menu>li {
+    padding:12px;
+}
+
+#menu>li>a {
+    font-size: larger;
+    font-weight: bold;
+    color: #f6f6f6;
+    text-decoration: none;
+}
+
+#menu>li>a:hover {
+    background-color: #f6f6f63a;
+    border: solid #f6f6f63a 1px;
+    border-radius: 25px;
+    padding: 16px;
+}
+
+#main {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    align-items: center;
+    width: 100%;
+    color: #000;
+}
+
+#discount {
+    background: var(--red-purple-gradient);
+    color: #f6f6f6;
+    font-weight: bold;
+    border: solid 1px var(--red-purple-gradient);
+    border-radius: 25px;
+    padding: 12px;
+    margin: 12px;
+}
+
+#main>p {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    background-color: #f6f6f6;
+    border: solid #9A109A 1px;
+    border-radius: 25px;
+    width: 75%;
+    margin: 12px;
+}
+
+#about {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    line-height: 1.2em;
+    text-align: center;
+    width: 75%;
+    padding: 24px;
+}
+
+#products {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    line-height: 1.2em;
+    text-align: center;
+    width: 75%;
+    padding: 24px;
+    gap:12px;   
+}
+
+.product {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    line-height: 1.2em;
+    text-align: center;
+    width: 75%;
+    padding: 24px;
+    gap: 30px; 
+    background-color: #f6f6f6;
+    border: solid rgba(0, 0, 0, 0.123) 1px;
+    border-radius: 25px;
+    box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.123);
+}
+
+.product:hover {
+    transform: scale(1.25);
+}
+
+.product>footer {
+    border: solid #f14444 1px;
+    border-radius: 25px;
+    background-color: #F14444;
+    color: #f6f6f6;
+    cursor: pointer;
+}
+
+#img-large {
+    height: 240px;
+    width: 240px;
+    padding: 12px;
+}
+
+#about>p, #products>p {
+    padding: 24px;
+}
+
+#contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+    background-color: #f6f6f6;
+    border: solid rgba(0, 0, 0, 0.123) 1px;
+    border-radius: 25%;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.123);
+    padding: 24px;
+    margin: 24px;
+    width: 55%;
+    height: auto;
+    font-weight: bold;
+    font-size: larger;
+}
+
+#contact>h3 {align-self: center;}
+
+#contact:hover {
+    transform: scale(1.25);
+}
+
+#contact-form>input:not(#submit-btn), #contact-form>#msg {
+    border: solid lightgray 1px;
+    border-radius: 25px;
+    width: 80%; 
+    color: #000; 
+}
+
+#contact-form>#email:hover, #contact-form>#msg:hover {
+    border: solid #9A109A 1px;
+}
+
+#email::placeholder {
+    color:lightgray;
+}
+
+#msg {
+    resize: none;
+}
+
+#msg::placeholder {
+    color:lightgray;
+    word-wrap: break-word;
+    text-align: center;
+    padding: 4px;
+}
+
+#submit-btn {
+    border: solid lightgray 1px;
+    border-radius: 25px;
+    width: 80%;
+    color: #f6f6f6;
+    background-color: #f14444;
+    cursor: pointer;
+}
+
+#submit-btn:hover {
+    opacity: 65%;
+}
+
+#contact-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    padding: 24px;
+}
+
+#contact-form>* {
+    margin: 8px;
+    padding: 4px;
+}
+
+#offers {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: center;
+    width: 55%;;
+}
+
+#offers-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+#offers-item {
+    line-height: 1.2em;
+    text-indent: 3.6em;
+    list-style-type: none;
+}
+
+#article-logo {
+    width: 12%;
+    padding: 8px;
+    vertical-align: middle;
+}
+
+#info {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    background: var(--red-purple-gradient);
+    border: solid var(--red-purple-gradient) 1px;
+    border-radius: 25px;
+    color:#f6f6f6;
+    width: 75%;
+    margin-top: 12px;
+    margin-bottom: 30px;
+}
+
+#info>a {
+    text-decoration: none;
+    color: cyan;
+    font-weight: bold;
+}
+
+#info>a:hover {
+    color: yellow;
+}
+
+@media screen and (max-width: 1200px) {
+    .container {
+        flex-direction: column;
+        width: 100vw;
+    }
+
+    #totop {
+        left: 97%;
+        font-size: medium;
+    }
+
+    #nav {
+        flex-direction: column;
+        font-size: xx-large;
+        width: 100vw;
+    }
+
+    #logo {
+        align-self: center;
+    }
+
+    #menu {
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+        padding: 0;
+        width: 100vw;
+    }
+
+    #menu-item>a {
+        flex-grow: 4;
+        width: 100vw;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    
+    .container {
+        flex-direction: column;
+       
+    }
+
+    #totop {
+        left: 75;
+        font-size: xx-small;
+     }
+
+    #nav {
+        flex-direction: column;
+        font-size: x-large;
+    }
+
+    #logo {
+        align-self: center;
+    }
+
+    #menu {
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+        padding: 0;
+    }
+
+    #menu-item>a {
+        flex-grow: 4;
+    }
+
+    #products, #contact {
+        flex-direction: column;
+    }
+
+    .product {
+        width: 65vw;
+    }
+
+    #contact {
+        width: 80vw;
+    }
+
+    section {
+        width: 300vw;
+    }
+
+} 
